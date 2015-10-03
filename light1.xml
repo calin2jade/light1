@@ -1,1 +1,34 @@
-<xml xmlns="http://www.w3.org/1999/xhtml"></xml>
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="controls_whileUntil" id="7" inline="false" x="49" y="20">
+    <field name="MODE">UNTIL</field>
+    <value name="NUMBER">
+      <block type="sensor_button" id="14">
+        <field name="OBJECT">ENTER</field>
+      </block>
+    </value>
+    <statement name="DO">
+      <block type="controls_if" id="27" inline="false">
+        <mutation elseif="1" else="1"></mutation>
+        <value name="IF0">
+          <block type="sensor_light" id="34">
+            <field name="LIGHT">LEFT</field>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="movement_left" id="44"></block>
+        </statement>
+        <value name="IF1">
+          <block type="sensor_line" id="55">
+            <field name="LINE">LEFT</field>
+          </block>
+        </value>
+        <statement name="DO1">
+          <block type="movement_right" id="65"></block>
+        </statement>
+        <statement name="ELSE">
+          <block type="movement_forward" id="80"></block>
+        </statement>
+      </block>
+    </statement>
+  </block>
+</xml>
